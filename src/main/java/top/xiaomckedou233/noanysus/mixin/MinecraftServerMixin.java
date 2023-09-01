@@ -15,7 +15,6 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import top.xiaomckedou233.noanysus.config.NoAnySUSConfig;
 
 import java.util.List;
 
@@ -32,7 +31,6 @@ public abstract class MinecraftServerMixin {
 
     @Inject(method = "buildPlayerStatus",at = @At(value = "HEAD"), cancellable = true)
     private void injected(CallbackInfoReturnable<ServerStatus.Players> cir) {
-        if(NoAnySUSConfig.isNoAnySUS()) {
             List<ServerPlayer> list = this.playerList.getPlayers();
             int i = this.playerList.getMaxPlayers();
             if (this.hidesOnlinePlayers()) {
@@ -49,7 +47,6 @@ public abstract class MinecraftServerMixin {
                 Util.shuffle(objectArrayList, random);
                 cir.setReturnValue(new ServerStatus.Players(i, list.size(), objectArrayList));
             }
-        }
     }
 }
 
