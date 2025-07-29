@@ -7,8 +7,10 @@
   "authors": [
     "Xiaomckedou233"
   ],
-  "contact": {},
-  "license": "All-Rights-Reserved",
+  "contact": {
+    "repo": "https://github.com/Xiaomckedou233/NoAnySUS"
+  },
+  "license": "LGPL-3.0",
   "environment": "server",
   "entrypoints": {
     "server": [
@@ -21,6 +23,6 @@
   "depends": {
     "fabricloader": ">=0.14.21",
     "fabric": "*",
-    "minecraft": "1.20.1"
+    "minecraft": "${minecraft}"
   }
 }

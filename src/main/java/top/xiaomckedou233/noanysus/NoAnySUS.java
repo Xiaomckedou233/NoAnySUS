@@ -9,6 +9,6 @@ public class NoAnySUS implements DedicatedServerModInitializer {
     @Override
     public void onInitializeServer() {
 
-        LOGGER.info("NoAnySUS,Start!");
+        LOGGER.info("NoAnySUS working...");
     }
 }
